@@ -1,5 +1,5 @@
 <div>
-    <form>
+    <form action="/login" method="post">
         <div class="container">
             <h1>Log In</h1>
             
@@ -14,8 +14,12 @@
 
             <div class="buttonClass">
                 <button type="submit" class="signupbtn">Log In</button>
+                <a href="/sign-up">sign up</a>
             </div>
         </div>
+        {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
     </form>
 </div>
 
